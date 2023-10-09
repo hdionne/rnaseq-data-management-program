@@ -28,8 +28,6 @@ ftp:> open ftp.ncbi.nlm.gov
 
 ```
 
-
-
 The sra-tools bioconda package doesn't seem to be able to be used on the discovery cluster. There's some network issue. That said, there's a module on the discovery cluster calle sratoolkit that I can use for this.
 
 If there's a list of 'SRR' accession #s stored in a local variable `$ACCESSION`
@@ -38,10 +36,7 @@ type `$ prefetch $ACCESSION` and it should download each one one at a time. In t
 
 The result of this command will give a bunch of folders with .sra files in them. To convert them to fastq files, run `$ fasterq-dump --split-files $ACCESSION`.
 
-
-### test
-
-Test snakemake
+### test snakemake
 
 #### 0%
 
